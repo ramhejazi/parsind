@@ -53,7 +53,7 @@ const parsind = require('parsind')
 const app = express()
 
 const routeParser = parsind({
-  controllersPath: path.join(__dirname, 'controllers'),
+  controllersDir: path.join(__dirname, 'controllers'),
   router: express.Router(),
   routes: {
     '/': 'indexController#welcome',
