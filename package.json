@@ -1,6 +1,6 @@
 {
   "name": "parsind",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Ramin Hejazi <ram.hejazi@mail.com> (https://htmlpack.com)",
   "description": "A HTTP resource manager and controller-autoloader!",
   "main": "index.js",
