@@ -57,7 +57,7 @@ describe('parsind', function() {
         let pretty = instance[method](true)[0];
         let len = instance.options.controllersDir.length + 1;
         assert.deepEqual({
-          [ugly.verb]: ugly.route,
+          route: `${ugly.verb.toUpperCase()} ${ugly.route}`,
           handler: `${ugly.controller.path.slice(len)}#${ugly.method}`
         }, pretty);
       })
