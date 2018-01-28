@@ -401,8 +401,4 @@ A controller is simply an object, exported in a JavaScript file that _should_ or
 The module expects you to have a controller file for each resource, even if it doesn't have any manually exported object.
 
 ## License
-<<<<<<< HEAD
 MIT © [Ram Hejazi]
-=======
-MIT
->>>>>>> eb752327ab442699820543c8ce12caf3b1b1c1de
