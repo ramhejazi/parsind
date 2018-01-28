@@ -1,30 +1,26 @@
 # parsind
-> HTTP resource route generator and controller autoloader.
+[![npm](https://img.shields.io/npm/v/parsind.svg?style=flat-square)](https://www.npmjs.com/package/parsind)
+ [![npm](https://img.shields.io/npm/dt/parsind.svg?style=flat-square)](https://www.npmjs.com/package/parsind)
 
-Configurable _parsind_ (\ˈpärˈsīnd\\) allows you to use simple
-JavaScript data structures for setting RESTful HTTP route handlers.
-It works with any sensible HTTP router (e.g. [express framework](http://expressjs.com/)'s router).
+A simple JavaScript library for defining RESTful HTTP verbs and binding their router handlers automagically.
+It works with any [express](http://expressjs.com/)-like routers.
+**Why?** Setting HTTP route handlers and loading controllers in complex web applications with many resources can be very tiring, error-prone and repetitive process. _parsind_ tries to facilitate this process.
 
 ## Table of Contents:
 - [Installation](#installation)
-- [Why?](#why)
 - [Example](#example)
-- [How does it work?](#how-does-it-work)
-  - [Parsing Rules](#1-parsing-rules)
-  - [Autoloading Controllers](#2-autoloading-controllers)
-  - [Binding Route Handlers](#3-binding-route-handlers)
+- [How it works](#how-does-it-work)
+  - [Parsing rules](#1-parsing-rules)
+  - [Autoloading controllers](#2-autoloading-controllers)
+  - [Binding route handlers](#3-binding-route-handlers)
 - [Documentation](#documentation)
 - [How-tos](#how-tos)
 - [Terminology](#terminology)
 
 ## Installation
 ```
-$ npm install pasind
+$ npm install parsind
 ```
-
-## Why?
-Setting HTTP route handlers and loading controllers in complex web applications with many resources can be very tiring, error-prone and repetitive process. _parsind_ tries to facilitate this process.  
-
 
 ## Example:
 ```
@@ -94,24 +90,24 @@ As an example, for a property that has `bars` key, by default the following rout
 
 | HTTP verb  | URL            |
 | ---------- |--------------- |
-| GET        | /bars          |
-| POST       | /bars          |
-| GET        | /bars/:bar_id  |
-| PUT        | /bars/:bar_id  |
-| PATCH      | /bars/:bar_id  |
-| DELETE     | /bars/:bar_id  |
+| `GET`        | `/bars`          |
+| `POST`       | `/bars`          |
+| `GET`        | `/bars/:bar_id`  |
+| `PUT`        | `/bars/:bar_id`  |
+| `PATCH`      | `/bars/:bar_id`  |
+| `DELETE`     | `/bars/:bar_id`  |
 
 The generated routes are concatenated with the parent resource's _item route_ URL.
 As an example, when the parent resource's item route is `/foos/:foo_id`, then the final routes will be:
 
 | HTTP verb  | URL                         |
 | ---------- |---------------------------- |
-| GET        | /foos/:foo_id/bars          |
-| POST       | /foos/:foo_id/bars          |
-| GET        | /foos/:foo_id/bars/:bar_id  |
-| PUT        | /foos/:foo_id/bars/:bar_id  |
-| PATCH      | /foos/:foo_id/bars/:bar_id  |
-| DELETE     | /foos/:foo_id/bars/:bar_id  |
+| `GET`        | `/foos/:foo_id/bars`          |
+| `POST`       | `/foos/:foo_id/bars`          |
+| `GET`        | `/foos/:foo_id/bars/:bar_id`  |
+| `PUT`        | `/foos/:foo_id/bars/:bar_id`  |
+| `PATCH`      | `/foos/:foo_id/bars/:bar_id`  |
+| `DELETE`     | `/foos/:foo_id/bars/:bar_id`  |
 
 ##### Routes
 
@@ -199,12 +195,12 @@ By default, 6 routes for each resource is generated (configurable). The HTTP ver
 
 | HTTP verb  | URL                     | Method        |
 | ---------- | ----------------------- | --------------|
-| GET        | /resource               | index         |
-| POST       | /resource               | store         |
-| GET        | /resource/:resource_id  | show          |
-| PUT        | /resource/:resource_id  | update        |
-| PATCH      | /resource/:resource_id  | patch         |
-| DELETE     | /resource/:resource_id  | destroy       |
+| `GET`        | `/resource`               | `index`         |
+| `POST`       | `/resource`               | `store`         |
+| `GET`        | `/resource/:resource_id`  | `show`          |
+| `PUT`        | `/resource/:resource_id`  | `update`        |
+| `PATCH`      | `/resource/:resource_id`  | `patch`         |
+| `DELETE`     | `/resource/:resource_id`  | `destroy`       |
 
 Each route is set on the router only when the resource controllers have the corresponding method.
 For example, if the resource controller has only 2 methods named `index` and `show` then only the following routes are set:
@@ -259,7 +255,7 @@ A set of key/value pairs.
   type: _object_ <br>
   This option accepts an object with 2 object properties: `entrance` and `item`.  
   These properties are used for setting route handlers for a resource by using properties of the resource's controller.
-  `entrance` keys are used for setting routes for _resource's entrance_ URL and `item` keys are using are used for setting routes for resource's _item route_ URL.
+  `entrance` keys are used for setting routes for _resource's entrance_ URL and `item` keys are used for setting routes for resource's _item route_ URL.
   - **router** <br>
   type: _object_ <br>
   A router object which is used for setting routes. If you are using Express framework you can pass the return value of
@@ -405,4 +401,8 @@ A controller is simply an object, exported in a JavaScript file that _should_ or
 The module expects you to have a controller file for each resource, even if it doesn't have any manually exported object.
 
 ## License
+<<<<<<< HEAD
+MIT © [Ram Hejazi]
+=======
 MIT
+>>>>>>> eb752327ab442699820543c8ce12caf3b1b1c1de
