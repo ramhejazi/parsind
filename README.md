@@ -1,8 +1,11 @@
 # parsind
+![Travis](https://img.shields.io/travis/ramhejazi/parsind.svg)
 [![npm](https://img.shields.io/npm/v/parsind.svg?style=flat-square)](https://www.npmjs.com/package/parsind)
  [![npm](https://img.shields.io/npm/dt/parsind.svg?style=flat-square)](https://www.npmjs.com/package/parsind)
+ ![Coveralls github](https://img.shields.io/coveralls/github/ramhejazi/parsind.svg)
 
-A simple JavaScript library for defining RESTful HTTP verbs and binding their router handlers automagically.
+
+A simple JavaScript library for defining RESTful HTTP verbs and binding their router handlers automagically!
 It works with any [express](http://expressjs.com/)-like routers.
 **Why?** Setting HTTP route handlers and loading controllers in complex web applications with many resources can be very tiring, error-prone and repetitive process. _parsind_ tries to facilitate this process.
 
