@@ -1,11 +1,12 @@
 {
   "name": "parsind",
-  "version": "0.1.4",
-  "author": "Ramin Hejazi <ram.hejazi@mail.com> (https://htmlpack.com)",
+  "version": "0.1.5",
+  "author": "Ram Hejazi",
   "description": "A HTTP resource manager and controller-autoloader!",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha ./test"
+    "test": "nyc --reporter=text --reporter=html ./node_modules/mocha/bin/mocha ./test",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "license": "MIT",
   "keywords": [
@@ -13,10 +14,11 @@
     "controller",
     "resource",
     "router",
+		"route",
     "autoloader",
-    "HTTP",
-    "REST",
-    "RESTful"
+    "http",
+    "rest",
+    "restful"
   ],
   "repository": {
     "type": "git",
@@ -32,8 +34,10 @@
     "snake-case": "^2.1.0"
   },
   "devDependencies": {
+    "coveralls": "^3.0.1",
     "express": "^4.14.0",
     "mocha": "^3.1.0",
+    "nyc": "^11.7.1",
     "supertest": "^2.0.0"
   }
 }
