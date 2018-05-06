@@ -14,7 +14,7 @@
     "controller",
     "resource",
     "router",
-		"route",
+    "route",
     "autoloader",
     "http",
     "rest",
