@@ -7,6 +7,7 @@
 
 A simple JavaScript library for defining RESTful HTTP verbs and binding their router handlers automagically!
 It works with any [express](http://expressjs.com/)-like routers.
+
 **Why?** Setting HTTP route handlers and loading controllers in complex web applications with many resources can be very tiring, error-prone and repetitive process. _parsind_ tries to facilitate this process.
 
 ## Table of Contents:
@@ -22,7 +23,7 @@ It works with any [express](http://expressjs.com/)-like routers.
 
 ## Installation
 ```
-$ npm install parsind
+$ npm i parsind
 ```
 
 ## Example:
