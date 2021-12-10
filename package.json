@@ -1,6 +1,6 @@
 {
   "name": "parsind",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "author": "Ram Hejazi",
   "description": "A HTTP resource manager and controller-autoloader!",
   "main": "index.js",
